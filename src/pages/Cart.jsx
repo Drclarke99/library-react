@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Cart = ({cart, changeQuantity}) => {
+const Cart = ({cart, changeQuantity, removeItem}) => {
     const total = () => {
         let price = 0;
         cart.forEach(item => {
@@ -38,7 +38,8 @@ const Cart = ({cart, changeQuantity}) => {
                                                     <span className="cart__book--price">
                                                         ${(book.salePrice || book.originalPrice).toFixed(2)}
                                                     </span>
-                                                    <button className="cart__book--remove">
+                                                    <button className="cart__book--remove"
+                                                        onClick={() => removeItem(book)}>
                                                         Remove
                                                     </button>
                                                 </div>

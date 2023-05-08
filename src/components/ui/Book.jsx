@@ -14,18 +14,18 @@ const Book = ({book}) => {
                     {book.title}
                 </a>
             </div>
-            <div className="book__rating">
-                <FontAwesomeIcon icon="star" />
-                <FontAwesomeIcon icon="star" />
-                <FontAwesomeIcon icon="star" />
-                <FontAwesomeIcon icon="star" />
-                <FontAwesomeIcon icon="star-half-alt" />
+            <div className="book__ratings">
+                {
+                    new Array(5).fill(0).map((_, index) => <FontAwesomeIcon icon="star" key={index}/>)
+                }
             </div>
             <div className="book__price">
                 {
                     book.salePrice 
                         ?   (<>
-                                <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>
+                                <span className="book__price--normal">
+                                    ${book.originalPrice.toFixed(2)}
+                                </span>
                                 ${book.salePrice.toFixed(2)}
                             </>)
                         : (<>

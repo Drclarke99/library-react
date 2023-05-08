@@ -4,6 +4,9 @@ import { faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faStar, fa
 import Landing from './components/Landing';
 import Highlights from './components/Highlights';
 import Featured from './components/Featured';
+import Discounted from './components/Discounted';
+import Explore from './components/Explore';
+import Footer from './components/Footer';
 
 library.add(faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faStar, faStarHalfAlt);
 
@@ -14,6 +17,9 @@ function App() {
       <Landing />
       <Highlights />
       <Featured />
+      <Discounted />
+      <Explore />
+      <Footer />
     </div>
   );
 }

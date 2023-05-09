@@ -16,7 +16,7 @@ import Books from './pages/Books';
 import {books} from "./data.js";
 import BookInfo from './pages/BookInfo';
 import Cart from './pages/Cart';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 library.add(faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faStar, faStarHalfAlt, faArrowLeft);
 
